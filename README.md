@@ -17,6 +17,19 @@ standard.
 See playground:
 https://thegraph.com/explorer/subgraph/schmidsi/generic-erc721-subgraph
 
+
+## Steps (by Larkin)
+
+Update `subgraph.yaml` as described below. Created hosted subgraph via [Hosted Service](https://thegraph.com/hosted-service/subgraph).
+```
+npm install -g @graphprotocol/graph-cli
+npm install
+graph codegen
+graph auth --product hosted-service <MY-GRT-AUTH-TOKEN>
+graph deploy --node https://api.thegraph.com/deploy/ codelarkin/the-happies
+```
+
+
 ## Fork and use your own contract
 
 The only thing that you need to change is the [`subgraph.yaml`](./subgraph.yaml)

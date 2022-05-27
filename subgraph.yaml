@@ -1,4 +1,4 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 description: The Happies ERC721 Subgraph (Transfers, Metadata)
 repository: https://github.com/CodeLarkin/happies-erc721-subgraph
 schema:
