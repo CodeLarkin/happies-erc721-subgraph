@@ -8,7 +8,7 @@ dataSources:
     name: Happies
     network: mainnet
     source:
-      address: "0xeD0A91AeA3390833f61DA838759A41bED4f1d8d7"
+      address: "0xefB4F583B2b6F0E8C658Dd7675E356D8a30Ac7FF"
       abi: ERC721
       startBlock: 14849456
     mapping:
