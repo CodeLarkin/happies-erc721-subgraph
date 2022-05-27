@@ -1,0 +1,29 @@
+specVersion: 0.0.2
+description: The Happies ERC721 Subgraph (Transfers, Metadata)
+repository: https://github.com/CodeLarkin/happies-erc721-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Happies
+    network: mainnet
+    source:
+      address: "0xeD0A91AeA3390833f61DA838759A41bED4f1d8d7"
+      abi: ERC721
+      startBlock: 14849456
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Token
+        - Owner
+        - Contract
+        - Transfer
+      abis:
+        - name: ERC721
+          file: ./abis/ERC721.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts
